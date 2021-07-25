@@ -5,7 +5,7 @@ const enterTodoList = (ev) => {
   if (ev.key === "Enter") addTodoList();
 }
 
-const loadFromStorage = () => {
+const loadftr = () => {
   if (localStorage.todo) {
     todo = JSON.parse(localStorage.todo)
   }
@@ -22,7 +22,7 @@ const loadFromStorage = () => {
   return { lastFinishList, lastTodoList }
 }
 
-const saveToStorage = () => {
+const savestr = () => {
   localStorage.todo = JSON.stringify(todo)
 }
 
@@ -35,8 +35,8 @@ const addTodoList = () => {
   todo.todoList.push(input.value)
   input.value = ""
   loadTodoList(todo.todoList[todo.todoList.length - 1], todo.todoList.length - 1)
-  saveToStorage()
-  const temp = loadFromStorage()
+  savestr()
+  const temp = loadftr()
   temp.lastTodoList.classList.add()
 
   temp.lastTodoList.classList.remove()
@@ -95,15 +95,15 @@ const loadTodoList = (input, index) => {
     todoList.remove()
     todo.todoList.splice(index, 1)
     todo.finishList.push(input)
-    saveToStorage()
-    const temp = loadFromStorage()
+    savestr()
+    const temp = loadftr()
     temp.lastFinishList.classList.remove()
   })
   deletebtn.addEventListener("click", () => {
       todoList.remove()
       todo.todoList.splice(index, 1)
-      saveToStorage()
-      loadFromStorage()
+      savestr()
+      loadftr()
     })
   todoList.addEventListener("mouseenter", () => {
 
@@ -161,4 +161,4 @@ const loadFinishList = (input) => {
   finishList.prepend(newItem)
   return newItem
 }
-loadFromStorage()
+loadftr()
