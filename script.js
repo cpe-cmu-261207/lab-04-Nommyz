@@ -60,7 +60,6 @@ const loadTodoList = (input, index) => {
   todoList.classList.add("h-auto")
   todoList.classList.add("px-4")
   todoList.classList.add("py-2")
-  todoList.classList.add("duration-500")
   todoList.classList.add("border-opacity-0")
   todoList.classList.add("border-2")
   todoList.classList.add("rounded-lg")
