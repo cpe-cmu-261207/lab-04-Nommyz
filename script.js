@@ -28,9 +28,9 @@ const saveToStorage = () => {
 
 const addTodoList = () => {
   const input = document.querySelector("input")
-  if (input.value === "") {
-    alert("Task cannot be empty")
-    return
+  if (input.value == "") {
+    return alert("Task cannot be empty")
+    
   }
   todo.todoList.push(input.value)
   input.value = ""
@@ -67,7 +67,6 @@ const loadTodoList = (input, index) => {
   todoList.classList.add("border-black")
   todoList.classList.add("bg-white")
   todoList.classList.add("relative")
-  todoList.classList.add("z-0")
   todoList.classList.add("shadow-md")
   title.classList.add("self-center")
   title.classList.add("w-4/5")
