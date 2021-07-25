@@ -110,8 +110,6 @@ const loadTodoList = (input, index) => {
     donebtn.classList.replace("invisible", "visible")
     deletebtn.classList.replace("invisible", "visible")
     donebtn.classList.remove("opacity-0")
-    deletebtn.classList.remove("opacity-0")
-    todoList.classList.add("sm:scale-110")
     todoList.classList.remove("border-opacity-0")
     p.classList.remove("truncate")
     p.classList.add("break-all")
@@ -120,9 +118,6 @@ const loadTodoList = (input, index) => {
 
     donebtn.classList.replace("visible", "invisible")
     deletebtn.classList.replace("visible", "invisible")
-    donebtn.classList.add("opacity-0")
-    deletebtn.classList.add("opacity-0")
-    todoList.classList.remove("sm:scale-110")
     todoList.classList.add("border-opacity-0")
     p.classList.add("truncate")
     p.classList.remove("break-all")
